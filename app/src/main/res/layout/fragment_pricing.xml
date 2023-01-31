@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.dashboard.fragments.home.hostactivity.fragments.price.PricingFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/players_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:id="@+id/header_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cost Per Player"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_additional_info"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_cost"
+        android:hint="PKR"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/selector"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/purple_dark_3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_cost"
+            style="@style/edit_text_2"
+            android:digits=".0123456789"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Payment Type"
+        android:textColor="@color/black" />
+
+
+    <LinearLayout
+        android:id="@+id/action_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/cont_cash"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_grey">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:id="@+id/tv_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Cash"
+                android:textColor="@color/purple_dark_3" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cont_wallet"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/bg_grey">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:id="@+id/tv_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Wallet"
+                android:textColor="@color/purple_dark_3" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ic_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/cont_cash_img"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_grad_purple">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:id="@+id/tv_cash_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Cash"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cont_wallet_img"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_grad_purple">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:id="@+id/tv_wallet_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Wallet"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_dis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:padding="10dp">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disclaimer"
+            android:textSize="15sp"
+            android:textColor="@color/grey_2"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

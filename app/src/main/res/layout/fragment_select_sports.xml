@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="30dp"
+    android:layout_marginTop="20dp"
+    android:paddingEnd="30dp"
+    android:orientation="vertical"
+    tools:context=".ui.signup.fragments.SelectSportsFragment">
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Which Sports are you interested in?"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sports"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+
+    <!--<GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/iv_football"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:padding="5dp"
+                android:src="@drawable/icon_football_unselected" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_football"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Football"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_football_tick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_green_tick" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/iv_cricket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/icon_cricket_unselected" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_cricket"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Cricket"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_cricket_tick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_green_tick" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/iv_badminton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/icon_badminton_unselected" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_badminton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Badminton"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_badminton_tick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_green_tick" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/iv_tennis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/icon_tennis_unselected" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_tennis"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Tennis"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_tennis_tick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_green_tick" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/iv_table_tennis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/icon_table_tennis_unselected" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_table_tennis"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Table Tennis"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_table_tennis_tick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_green_tick" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/iv_volley_ball"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/icon_volley_ball_unselected" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_volley_ball"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Volley Ball"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_volley_ball_tick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_green_tick" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/iv_basket_ball"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@drawable/icon_basket_ball_unselected" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_basket_ball"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Basket Ball"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_basket_ball_tick"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:padding="2dp"
+                android:src="@drawable/icon_green_tick" />
+
+        </RelativeLayout>
+
+    </GridLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/cont_continue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/bg_white"
+        android:visibility="gone">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Continue"
+            android:textColor="@color/purple_dark_3" />
+
+    </RelativeLayout>
+
+</LinearLayout>

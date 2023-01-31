@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_white_rounded"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cont_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.go.sport.custom.textview.MediumTextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Filter By"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/grey_3" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/grey_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="#7E7E7E" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#727272"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/selector"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="#727272">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_location"
+                    style="@style/edit_text_2"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/grey_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price (PKR)"
+                android:textColor="#7E7E7E" />
+
+            <com.mohammedalaa.seekbar.DoubleValueSeekBarView
+                android:id="@+id/double_range_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:r2CurrentMaxValue="5000"
+                app:r2CurrentMinValue="0"
+                app:r2barHeight="5dp"
+                app:r2baseColor="@color/grey_3"
+                app:r2circleFillColor="@color/purple_dark_3"
+                app:r2circleRadius="15dp"
+                app:r2circleTextColor="@color/white"
+                app:r2circleTextSize="12sp"
+                app:r2fillColor="@color/purple_dark"
+                app:r2maxValue="5000"
+                app:r2maxValueStep="1"
+                app:r2minValue="0"
+                app:r2minValueStep="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont_apply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cont_text"
+        android:background="@drawable/filter_button">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Apply"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont_clear_filter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cont_apply"
+        android:layout_marginTop="5dp">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_clear_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Clear All Filters"
+            android:textColor="@color/purple_dark" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

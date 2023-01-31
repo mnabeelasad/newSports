@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.signup.fragments.OtpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_otp" />
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Verify your Mobile Number"
+            android:textColor="@color/white" />
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="We have sent you SMS with 4 digits verification code (OTP) on"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pin_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="25dp"
+        app:cursorVisible="true"
+        app:forceKeyboard="false"
+        app:inputType="number"
+        app:password="false"
+        app:pinBackground="@drawable/bg_otp"
+        app:pinHeight="60dp"
+        app:pinLength="4"
+        android:imeOptions="actionSend"
+        app:pinWidth="60dp"
+        app:splitWidth="15dp"
+        app:textSize="8sp" />
+
+    <RelativeLayout
+        android:id="@+id/cont_verify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_white"
+        android:visibility="gone">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Verify"
+            android:textColor="@color/purple_dark_3" />
+
+    </RelativeLayout>
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:id="@+id/tv_resend_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Resend Code?"
+        android:textColor="@color/white" />
+
+</LinearLayout>

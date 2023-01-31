@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.dashboard.activities.ActivitiesActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_upload_picture" />
+
+    <RelativeLayout
+        android:id="@+id/cont_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_app_bar"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/arrow_left" />
+
+        <com.go.sport.custom.textview.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/iv_back"
+            android:text="Activities"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        style="@style/Base.Widget.Design.TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont_app_bar"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/purple_dark"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="bottom"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/purple_dark"
+        app:tabTextAppearance="@style/tab_text"
+        app:tabTextColor="@color/grey_3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_layout"
+        android:layout_margin="10dp"
+        android:overScrollMode="never" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_filter"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:animateLayoutChanges="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_my_activities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pending_activities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

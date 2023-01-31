@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cont_root"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/icon_offers_item_bg"
+    android:elevation="10dp">
+
+    <LinearLayout
+        android:id="@+id/cont_avail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_offer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Get 30 % OFF on \nEarly Booking"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/tv_avail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/icon_avail_offer_bg" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont_avail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Share Offer Via"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_fb_white" />
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/icon_google_white" />
+
+            <ImageView
+                android:id="@+id/whatsapp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/icon_whatsapp_white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

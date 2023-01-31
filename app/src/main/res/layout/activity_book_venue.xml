@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.dashboard.fragments.home.hostactivity.fragments.venue.book.BookVenueActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_upload_picture" />
+
+    <RelativeLayout
+        android:id="@+id/cont_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_app_bar"
+        android:elevation="10dp"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/arrow_left" />
+
+        <com.go.sport.custom.textview.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/iv_back"
+            android:text="Book"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/icon_search" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont_top"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/cont_app_bar"
+        android:visibility="gone"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:id="@+id/iv_highest_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_highest_rating" />
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/iv_highest_rating"
+            android:text="Highest Rating"
+            android:textColor="#949494" />
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/filter"
+            android:textColor="#636363" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont_top"
+        android:layout_margin="15dp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</RelativeLayout>

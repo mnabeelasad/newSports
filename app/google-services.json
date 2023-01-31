@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "793829651993",
+    "project_id": "gosports-1cc13",
+    "storage_bucket": "gosports-1cc13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793829651993:android:0399570c3d5a57c1a45c88",
+        "android_client_info": {
+          "package_name": "com.go.sport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793829651993-3u7e5cjbr94v84eedampb0eiujca3jb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.go.sport",
+            "certificate_hash": "39d8b9ec44699d66617a44c3f7727705a3127b38"
+          }
+        },
+        {
+          "client_id": "793829651993-7gufhilg5cf6ai3ncaaploev0mnfg8ch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.go.sport",
+            "certificate_hash": "ea5c980069546d846a3310b86801af749eb95f2b"
+          }
+        },
+        {
+          "client_id": "793829651993-o5alb9r3p2jalggcd4h61jc9f2jgdtm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4v41DSxK5qTKapg7g3X-qvLyStNHiWys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793829651993-o5alb9r3p2jalggcd4h61jc9f2jgdtm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

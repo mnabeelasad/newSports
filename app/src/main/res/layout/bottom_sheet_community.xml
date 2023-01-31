@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_white_rounded"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cont_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.go.sport.custom.textview.MediumTextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Filter By"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/grey_3" />
+
+        <LinearLayout
+            android:id="@+id/cont_sports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:textColor="#7E7E7E" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_sports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/grey_3" />
+
+        <LinearLayout
+            android:id="@+id/cont_age_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textColor="#7E7E7E" />
+
+            <com.mohammedalaa.seekbar.DoubleValueSeekBarView
+                android:id="@+id/double_range_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:r2CurrentMaxValue="80"
+                app:r2CurrentMinValue="13"
+                app:r2barHeight="5dp"
+                app:r2baseColor="@color/grey_3"
+                app:r2circleFillColor="@color/purple_dark_3"
+                app:r2circleRadius="15dp"
+                app:r2circleTextColor="@color/white"
+                app:r2circleTextSize="12sp"
+                app:r2fillColor="@color/purple_dark"
+                app:r2maxValue="80"
+                app:r2maxValueStep="1"
+                app:r2minValue="13"
+                app:r2minValueStep="1" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_3"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/grey_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textColor="#7E7E7E" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/cont_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stroke_purple_5_radius">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tv_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Male"
+                        android:textColor="@color/purple_dark_3" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cont_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stroke_purple_5_radius">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tv_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Female"
+                        android:textColor="@color/purple_dark_3" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cont_unisex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stroke_purple_5_radius">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tv_unisex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Unisex"
+                        android:textColor="@color/purple_dark_3" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont_apply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cont_text"
+        android:background="@drawable/bg_bottom_sheet_button">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Apply"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

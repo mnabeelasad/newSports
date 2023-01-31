@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Go Play</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sign_up"><u>Sign Up</u></string>
+    <string name="dummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt. Erat nam at lectus urna duis convallis convallis. Aenean pharetra magna ac placerat. Elit duis tristique sollicitudin nibh. Interdum velit laoreet id donec ultrices tincidunt arcu. Elit ullamcorper dignissim cras tincidunt. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Neque viverra justo nec ultrices dui sapien eget mi proin. Dolor magna eget est lorem ipsum dolor. Tristique nulla aliquet enim tortor at auctor urna nunc. Diam quam nulla porttitor massa id neque. Sit amet porttitor eget dolor morbi.
+\n\n
+Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Sagittis orci a scelerisque purus semper eget. Sem integer vitae justo eget. In vitae turpis massa sed elementum tempus egestas sed sed. Lacus sed turpis tincidunt id. At in tellus integer feugiat scelerisque. Augue eget arcu dictum varius. Risus nullam eget felis eget nunc lobortis mattis. Sit amet aliquam id diam maecenas ultricies mi eget mauris. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Morbi tristique senectus et netus et malesuada fames ac. Congue mauris rhoncus aenean vel elit scelerisque.
+\n\n
+Ac auctor augue mauris augue neque. Placerat in egestas erat imperdiet. Ornare aenean euismod elementum nisi quis eleifend. Facilisi etiam dignissim diam quis. Sem integer vitae justo eget magna fermentum iaculis. Eget velit aliquet sagittis id consectetur purus ut faucibus. Habitant morbi tristique senectus et netus et malesuada. Varius morbi enim nunc faucibus a pellentesque. Egestas sed tempus urna et. Nisi vitae suscipit tellus mauris a diam maecenas sed. Egestas integer eget aliquet nibh praesent tristique magna. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Pellentesque eu tincidunt tortor aliquam nulla facilisi. Arcu risus quis varius quam quisque id diam vel.
+\n\n
+Euismod lacinia at quis risus. Cursus in hac habitasse platea dictumst. Nisi lacus sed viverra tellus in. Pharetra sit amet aliquam id diam maecenas. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. In vitae turpis massa sed. Ac tortor vitae purus faucibus. Eros in cursus turpis massa tincidunt dui. Id volutpat lacus laoreet non curabitur gravida arcu. Urna nec tincidunt praesent semper feugiat nibh. Etiam erat velit scelerisque in dictum non consectetur. Sed turpis tincidunt id aliquet risus feugiat in ante metus.
+\n\n
+Porttitor massa id neque aliquam. Ultricies mi eget mauris pharetra et ultrices neque ornare. Semper risus in hendrerit gravida rutrum quisque non tellus. At elementum eu facilisis sed odio morbi quis. Fermentum dui faucibus in ornare quam viverra orci sagittis. Ultricies integer quis auctor elit sed vulputate. Quam elementum pulvinar etiam non quam lacus. Euismod lacinia at quis risus sed vulputate. Ante in nibh mauris cursus. Tortor pretium viverra suspendisse potenti nullam. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Senectus et netus et malesuada. Commodo elit at imperdiet dui accumsan sit amet nulla. Ornare aenean euismod elementum nisi quis. Nunc mattis enim ut tellus elementum sagittis vitae et. Sem et tortor consequat id. Ut ornare lectus sit amet est placerat. Felis imperdiet proin fermentum leo vel orci porta non. Scelerisque eleifend donec pretium vulputate. Nec dui nunc mattis enim ut.</string>
+    <string name="view_all"><u>View all</u></string>
+    <string name="filter"><u>Filters</u></string>
+
+    <string name="api_key">AIzaSyAH-3QThDt8_SRK-X66WRcgG1imIDE81hQ</string>
+    <!--    <string name="default_web_client_id">793829651993-o5alb9r3p2jalggcd4h61jc9f2jgdtm8.apps.googleusercontent.com</string>-->
+    <string name="facebook_app_id">131017608925074</string>
+    <string name="fb_login_protocol_scheme">fb131017608925074</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reset"><u>Reset</u></string>
+
+    <string name="press_back_once_more_to_exit">Press back once more to exit!</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="disclaimer">*<u>Disclaimer</u></string>
+
+</resources>

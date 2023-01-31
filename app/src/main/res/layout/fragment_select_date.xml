@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:overScrollMode="never"
+    tools:context=".ui.dashboard.fragments.home.hostactivity.fragments.date.SelectDateFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/cont_cost_venue"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:id="@+id/cont_pitch_venue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Pitch/Court Details"
+                        android:textColor="@color/black" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_available_pitches"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="5" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:orientation="horizontal">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Select Your Date"
+                        android:textColor="@color/black" />
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@id/tvDate"
+                        android:textColor="@color/black" />
+
+
+                    <Button
+                        android:id="@+id/btnLeft"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toLeftOf="@+id/tvmonth"
+
+                        android:background="@drawable/ic_arrow_left_24dp" />
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tvmonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/btnRight"
+                        android:text="month"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnRight"
+
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+
+                        android:background="@drawable/ic_arrow_right_24dp" />
+
+                </RelativeLayout>
+
+                <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
+                    android:id="@+id/main_single_row_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:deselection="false"
+                    app:longPress="false"
+                    app:multiSelection="false" />
+
+                <LinearLayout
+                    android:id="@+id/cont_time_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/timing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Available Time"
+                        android:textColor="@color/black" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/time_start"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <com.go.sport.custom.textview.RegularTextView
+                                android:id="@+id/tv_start_time_head"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:text="Start time"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/time_end"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <com.go.sport.custom.textview.RegularTextView
+                                android:id="@+id/tv_end_time_head"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:text="End time"
+                                android:textColor="@color/black" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1">
+
+                            <com.go.sport.custom.textview.RegularTextView
+                                android:id="@+id/tv_start_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/stroke_grey_5_radius"
+                                android:gravity="center"
+                                android:text="Select Start time"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1">
+
+                            <com.go.sport.custom.textview.RegularTextView
+                                android:id="@+id/tv_end_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/stroke_grey_5_radius"
+                                android:gravity="center"
+                                android:text="Select End time"
+                                android:textColor="@color/black" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cont_time_venue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Available Time"
+                        android:textColor="@color/black" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_time_venue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/row_venue_time" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/cont_pitch_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Pitch/Court Details"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_select_pitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/stroke_grey_5_radius"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start|center"
+                        android:hint="Enter pitch or court"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="⦁ Please add details for the Pitch/Court to assist the players to identify the pitch/court at the venue. Example for football: 7x7 Pitch 1 ."
+                    android:textSize="12sp"
+                    />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/cont_cost_venue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_pitch"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cost"
+                    android:textColor="@color/black" />
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:id="@+id/tv_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/dark_gray" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

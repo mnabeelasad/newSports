@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/iv_sports"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerInParent="true"
+            app:tint="@color/purple_dark"
+            android:padding="5dp" />
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_sports"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Football"
+            android:textColor="@color/purple_dark_3"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_tick"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="-35dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/cont"
+        android:padding="2dp"
+        android:src="@drawable/icon_green_tick" />
+
+</RelativeLayout>

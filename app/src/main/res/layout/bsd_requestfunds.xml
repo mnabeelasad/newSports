@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_white_rounded"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_msg"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Reason"
+        android:textColorHint="#727272"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/selector"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#727272">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_msg"
+            style="@style/msg_edit_text"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_amount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="PKR"
+        android:textColorHint="#727272"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/selector"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#727272">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_amount"
+            style="@style/edit_text_2"
+            android:digits=".0123456789"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont_request_to_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_grad_purple">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Request"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

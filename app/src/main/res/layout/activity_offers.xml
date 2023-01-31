@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.dashboard.fragments.home.offers.OffersActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_upload_picture" />
+
+    <RelativeLayout
+        android:id="@+id/cont_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_app_bar"
+        android:elevation="10dp"
+        tools:targetApi="lollipop">
+
+     <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/arrow_left" />
+
+        <com.go.sport.custom.textview.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/iv_back"
+            android:text="Offers"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:text="@string/filter"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_offers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:overScrollMode="never"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="80dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</RelativeLayout>

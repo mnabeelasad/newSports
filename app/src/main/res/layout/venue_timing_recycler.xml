@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/nested"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Wednesday"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="#1E1E1E" />
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:id="@+id/start_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/view3"
+                android:text="12:00 PM"
+                android:textColor="#1E1E1E"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="16dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/start_times"
+                android:background="#1E1E1E" />
+
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:id="@+id/end_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/view2"
+                android:text="2:45 AM"
+                android:textColor="#1E1E1E"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/sep"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/nested"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.dashboard.DashboardActivity">
+
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/cont_bottom_bar"
+        android:background="@android:color/white" />
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/cont_bottom_bar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:background="@drawable/bg_bottom_bar">-->
+
+    <RelativeLayout
+        android:id="@+id/cont_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom_bar">
+
+        <me.ibrahimsn.lib.NiceBottomBar
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:backgroundColor="@android:color/transparent"
+            app:indicatorColor="#FFCB4D"
+            app:itemFontFamily="@font/roboto_regular"
+            app:menu="@menu/menu_bottom_bar"
+            app:textColor="@color/white"
+            app:textColorActive="@color/white" />
+
+    </RelativeLayout>
+    <!--    </RelativeLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myview"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        />
+
+
+</RelativeLayout>

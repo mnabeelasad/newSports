@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/receiver_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.LightTextView
+                android:id="@+id/tv_receiver_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                android:text="26-12-2021"
+                android:visibility="visible"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/receiver_dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/avatar" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/receiver_dp"
+                    android:background="@drawable/sender_bg"
+                    android:padding="4dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tv_receiver_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem Ipsum dolor sit amet"
+                        android:textColor="@color/grey_2"
+                        android:textSize="12sp" />
+
+                        <com.go.sport.custom.textview.RegularTextView
+                            android:id="@+id/tv_receiver_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12:45 PM"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/tv_receiver_message"
+                            android:layout_below="@+id/tv_receiver_message"
+                            android:textColor="@color/grey_2"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sender_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.LightTextView
+                android:id="@+id/tv_sender_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                android:text="26-12-2021" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <RelativeLayout
+                    android:id="@+id/sender_text_cont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/receiver_bg"
+                    android:padding="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.go.sport.custom.textview.RegularTextView
+                            android:id="@+id/tv_sender_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lorem Ipsum dolor sit amet"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <com.go.sport.custom.textview.RegularTextView
+                            android:id="@+id/tv_sender_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12:45 PM"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/tv_sender_msg"
+                            android:layout_below="@+id/tv_sender_msg"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/sender_dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/avatar"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/receiver_cont_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.LightTextView
+                android:id="@+id/tv_receiver_time_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:text="3:50 PM"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/receiver_dp_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/receiver_dp_image"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/tv_receiver_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp" />
+
+                    <ImageView
+                        android:id="@+id/play_pause_receiver"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_play_pause" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sender_cont_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.go.sport.custom.textview.LightTextView
+                android:id="@+id/tv_sender_time_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="65dp"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/sender_image_cont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/sender_dp_image"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/tv_sender_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/play_pause_sender"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_play_pause" />
+
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/sender_dp_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

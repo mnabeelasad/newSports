@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_white_rounded"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Group Name"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Group name"
+        android:textColorHint="#727272"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/selector"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#727272">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_group_name"
+            style="@style/edit_text_2"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/cont_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_grad_purple">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Done"
+            android:id="@+id/tv_search"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

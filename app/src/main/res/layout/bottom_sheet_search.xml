@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_white_rounded"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Name"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Search Players"
+        android:textColorHint="#727272"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/selector"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="#727272">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search"
+            style="@style/edit_text_2"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Age"
+        android:textColor="@color/black" />
+
+    <com.mohammedalaa.seekbar.DoubleValueSeekBarView
+        android:id="@+id/double_range_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:r2CurrentMaxValue="80"
+        app:r2CurrentMinValue="16"
+        app:r2barHeight="5dp"
+        app:r2baseColor="@color/grey_3"
+        app:r2circleFillColor="@color/purple_dark_3"
+        app:r2circleRadius="15dp"
+        app:r2circleTextColor="@color/white"
+        app:r2circleTextSize="12sp"
+        app:r2fillColor="@color/purple_dark"
+        app:r2maxValue="80"
+        app:r2maxValueStep="1"
+        app:r2minValue="16"
+        app:r2minValueStep="1" />
+
+    <com.go.sport.custom.textview.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Gender"
+        android:layout_marginBottom="5dp"
+
+        android:textColor="@color/black" />
+
+    <RadioGroup
+        android:layout_marginStart="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unisex"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Sports"
+            android:layout_marginBottom="5dp"
+
+            android:textColor="@color/black" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_sports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/cont_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_grad_purple">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Search"
+            android:id="@+id/tv_search"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

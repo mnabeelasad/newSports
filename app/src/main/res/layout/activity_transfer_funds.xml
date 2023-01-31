@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.dashboard.transferfunds.TransferFundsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_upload_picture" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/cont_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_app_bar"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/arrow_left" />
+
+            <com.go.sport.custom.textview.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/iv_back"
+                android:text="Transfer Funds"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:id="@+id/total_debit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:lines="1"
+                    android:text="TOTAL SENT"
+                    android:textSize="9sp" />
+
+                <LinearLayout
+                    android:id="@+id/cont_debit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_debit"
+                    android:layout_marginStart="25dp"
+                    android:orientation="horizontal">
+
+                    <com.go.sport.custom.textview.BoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginEnd="5dp"
+                        android:lines="1"
+                        android:paddingBottom="2dp"
+                        android:text="PKR"
+                        android:visibility="gone"
+                        android:textColor="@color/purple_dark_3"
+                        android:textSize="12sp" />
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tv_sent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toRightOf="@+id/tv_currency"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/red" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:id="@+id/total_credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="25dp"
+                    android:lines="1"
+                    android:text="TOTAL RECEIVED"
+                    android:textSize="9sp" />
+
+                <LinearLayout
+                    android:id="@+id/cont_credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_credit"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="25dp"
+                    android:orientation="horizontal">
+
+                    <com.go.sport.custom.textview.BoldTextView
+                        android:id="@+id/tv_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginEnd="5dp"
+                        android:lines="1"
+                        android:paddingBottom="2dp"
+                        android:text="PKR"
+                        android:visibility="gone"
+                        android:textColor="@color/purple_dark_3"
+                        android:textSize="12sp" />
+
+                    <com.go.sport.custom.textview.RegularTextView
+                        android:id="@+id/tv_received"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/green" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cont_start_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:orientation="horizontal"
+                android:paddingStart="25dp">
+
+                <com.go.sport.custom.textview.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toRightOf="@+id/tv_currency"
+                    android:lines="1"
+                    android:text="STARTS"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:id="@+id/tv_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toRightOf="@+id/tv_currency"
+                    android:lines="1"
+                    android:text="SELECT DATE"
+                    android:textColor="@color/purple_dark_3"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/cont_end_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end|center"
+                android:orientation="horizontal"
+                android:paddingEnd="25dp">
+
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:id="@+id/tv_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toRightOf="@+id/tv_currency"
+                    android:lines="1"
+                    android:text="SELECT DATE"
+                    android:textColor="@color/purple_dark_3"
+                    android:textSize="12sp" />
+
+                <com.go.sport.custom.textview.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toRightOf="@+id/tv_currency"
+                    android:lines="1"
+                    android:text="ENDS"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_transferfunds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+</RelativeLayout>

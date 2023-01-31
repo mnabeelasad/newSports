@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signup.fragments.BirthdayFragment">
+
+    <RelativeLayout
+        android:id="@+id/cont_wing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/bg_splash_wing" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="211dp"
+            android:transitionName="logo"
+            app:srcCompat="@drawable/logo_splash"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont_wing"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/regularTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When Is Your Birthday?"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/cont"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_dd"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="DD"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/selector_white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_dd"
+                        style="@style/edit_text"
+                        android:digits="0123456789"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_mm"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="MM"
+                    android:layout_marginStart="10dp"
+                    android:textColorHint="@color/white"
+                    android:layout_weight="1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/selector_white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_mm"
+                        style="@style/edit_text"
+                        android:digits="0123456789"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_yyyy"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="YYYY"
+                    android:layout_marginStart="10dp"
+                    android:textColorHint="@color/white"
+                    android:layout_weight="1"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/selector_white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_yyyy"
+                        style="@style/edit_text"
+                        android:digits="0123456789"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/cont_continue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_white"
+            android:visibility="gone">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Continue"
+                android:textColor="@color/purple_dark_3" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.signup.fragments.GenderFragment">
+
+    <RelativeLayout
+        android:id="@+id/cont_wing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wing"
+            app:srcCompat="@drawable/bg_splash_wing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            app:srcCompat="@drawable/logo_splash"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="211dp"
+            android:transitionName="logo"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont_wing"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/regularTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="And Your Gender?"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cont_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_male"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_male_unselected" />
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Male"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cont_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_female"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_female_unselected" />
+
+                <com.go.sport.custom.textview.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Female"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/cont_continue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_white">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Continue"
+                android:textColor="@color/purple_dark_3" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

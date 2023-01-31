@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signup.fragments.NameInfoFragment">
+
+    <RelativeLayout
+        android:id="@+id/cont_wing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/bg_splash_wing" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="211dp"
+            android:transitionName="logo"
+            app:srcCompat="@drawable/logo_splash"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont_wing"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <com.go.sport.custom.textview.RegularTextView
+            android:id="@+id/regularTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What's Your Name?"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_first_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="First Name"
+            android:textColorHint="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/selector_white"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_first_name"
+                style="@style/edit_text"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_last_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Last Name"
+            android:textColorHint="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/selector_white"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_last_name"
+                style="@style/edit_text"
+                android:imeOptions="actionSend"
+                android:inputType="textPersonName"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/cont_continue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_white">
+
+            <com.go.sport.custom.textview.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Continue"
+                android:textColor="@color/purple_dark_3" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
